@@ -51,3 +51,42 @@ How do you set state?
 
 - How will my component behave as user interacts with the app / component?
 - what do we expect to test for? behavior? functionality (in our reducers / pure functions) both.. it depends.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Notes from Class 27
+
+## Review Notes
+
+> What is a hook? A special function that lets you "hook into" React features. For example, useState is a hook that lets you add React state to function components.
+
+```JavaScript
+let Keelen {
+  name: 'Keelen',
+  age: 24
+  }
+
+  let chico = {
+    name: 'Chico Rancho',
+    age: 5
+    }
+
+let family = [Keelen, chico]
+
+const [first] = family
+
+console.log(first);
+
+// How to set up State in a functional component
+// Remember, You can not change state!
+const [count, setCount] = useState(0);
+const [moreState, setMoreState] = useState(family);
+
+// how do I access "Chico Ranch" from the moreState variable
+moreState[1].name
+
+// increment count
+let newCount = count + 1;
+setCount(newCount);
+
+```
