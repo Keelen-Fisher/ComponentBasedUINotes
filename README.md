@@ -90,3 +90,31 @@ let newCount = count + 1;
 setCount(newCount);
 
 ```
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Notes from Class 28
+
+## Review Note
+
+- In function components, we have ONE lifecycle hook that can handle "everything": useEffect();
+
+### useEffect() Hook
+
+WHY
+
+- Manage lifecycle events
+- Manage Side-effects
+
+useEffect will handle all of the following cases:
+
+- Must do the thing correctly.....
+  - every time an event occurs (greedy)
+  - can do a thing ONCE when an event occurs
+  - when state is updated
+  - when a component unmounts - important to turn things off!
+
+### NOTE
+
+- We are using a dev environment build. We may see things happen more then "ONCE"
+- msw for testing can be an option for integration testing. not sure if it's necessary.
