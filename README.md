@@ -118,3 +118,54 @@ useEffect will handle all of the following cases:
 
 - We are using a dev environment build. We may see things happen more then "ONCE"
 - msw for testing can be an option for integration testing. not sure if it's necessary.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Notes from Class 29
+
+## Review - Notes
+
+## Reduce Pattern
+
+``` javascript
+let arr = ['ryan, lucky'];
+
+let objArr = arr.reduce((newArr, objName) => {
+  // newArr = [...newArr, {name: objName}];
+  newArr.push({name: objName});
+  return newArr;
+}, []);
+
+console.log(objArr);
+```
+
+- What is returned? a new object, aka an array of objects
+
+### Pure Function
+
+> a function that takes in input, does some processing and returns a new object
+
+### useReducer() Hook
+
+- can in use in place of useState();
+- can manipulate state in more complex ways than useState();
+
+``` javascript
+let initialState = {
+  name: 'Seasame Street',
+  characters: [],
+}
+
+
+function reducer(state, payload){
+  return {...state, characters: [...state.characters, payload]};
+}
+
+
+let updatedState = reduce(initialState, 'Elmo');
+```
+
+React realizes that managing individual state variables is complex across many components
+
+- When updating "state", each component just needs to know what to give the reducer.
+
